@@ -1,0 +1,35 @@
+
+// As per my understanding , the expected  Resource feature file for the before coded scenario .
+
+1) Create project structure 
+
+@FindBy(how=How.id , using ="lst-ib")
+public static WebElement searchengine;
+
+@FindBy(how=How.xpath , using ="//div[@class='sbqs_c']")
+public static WebElement AllLinks;
+
+
+2)Create under test/resources feature file
+
+
+Feature: Google Searching  (it specifies module name)
+
+  Scenario: The total number of results that google brings back (it specifies condition)
+    Given   A web browser is at the Google home page     (it specifies pre-condition)
+    When    The user enters "Test Automation" into the search bar (it specifies data for condition)
+    Then    Auto suggestion list related to "Test Automation" are shown (it specifies expected outcome)
+    Then    Count related to "Test Automation" are shown on the results page 
+    And     List related to "Test Automation" are shown on the result page
+
+ 
+
+3) Create BDD testing runner class:
+
+Each line of the Gherkin scenario maps to a method in a step_Defination class
+
+Copy the glue code from console and paste it in step_Defination class
+
+4) Step definitions of our testing tool:
+
+
